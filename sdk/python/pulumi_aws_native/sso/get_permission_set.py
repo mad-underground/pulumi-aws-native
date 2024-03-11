@@ -27,8 +27,8 @@ class GetPermissionSetResult:
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
-        if inline_policy and not isinstance(inline_policy, dict):
-            raise TypeError("Expected argument 'inline_policy' to be a dict")
+        if inline_policy and not isinstance(inline_policy, str):
+            raise TypeError("Expected argument 'inline_policy' to be a str")
         pulumi.set(__self__, "inline_policy", inline_policy)
         if managed_policies and not isinstance(managed_policies, list):
             raise TypeError("Expected argument 'managed_policies' to be a list")
